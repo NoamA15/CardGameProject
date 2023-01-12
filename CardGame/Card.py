@@ -13,7 +13,7 @@ class Card:
         self.value = value
         self.suit = suit
 
-    def __str__(self):
+    def __repr__(self):
         if self.value == 1:
             return f"Ace: {self.suit}"
         elif self.value == 11:
@@ -24,7 +24,6 @@ class Card:
             return f"King: {self.suit}"
         else:
             return f"{self.value}: {self.suit}"
-
 
     def __gt__(self,other):
         if type(other) != Card:
