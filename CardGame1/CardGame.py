@@ -20,10 +20,10 @@ class CardGame:
 
     def new_game(self):
         self.deck.cards_shuffle()
+        if len(self.p1.hand) > 0 and len(self.p2.hand) > 0:
+            raise ValueError('Game has begun')
         self.p1.set_hand(self.deck)
         self.p2.set_hand(self.deck)
-        if self.p1.hand > 0 and self.p2.hand > 0:
-            raise ValueError('Game has begun')
 
     def get_winner(self):
         if len(self.p1.hand) > len(self.p2.hand):
@@ -31,4 +31,4 @@ class CardGame:
         elif len(self.p1.hand) < len(self.p2.hand):
             return f'{self.p2.name} is the FUCKING WINNER!'
         else:
-            return
+            return None

@@ -15,6 +15,9 @@ class Player:
         self.number_of_cards = number_of_cards
         self.hand = []
 
+    def __repr__(self):
+        return f"{self.name}- {self.hand}"
+
     def set_hand(self, deck: DeckOfCards):
         if type(deck) != DeckOfCards:
             raise TypeError("Argument deck must be of type DeckOfCards")
@@ -24,7 +27,7 @@ class Player:
     def get_card(self, hand: list):
         if type(hand) != list:
             raise TypeError("Argument hand must be of type list")
-        return hand.pop(randint(0, self.number_of_cards))
+        return hand.pop(randint(0, len(self.hand)-1))
 
     def add_card(self, card: Card):
         self.hand.append(card)

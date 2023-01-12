@@ -25,7 +25,7 @@ class Card:
         else:
             return f"{self.value}: {self.suit}"
 
-    def __gt__(self,other):
+    def __gt__(self, other):
         if type(other) != Card:
             raise TypeError("Argument other must be of type Card")
         if self.value == 1 and other.value != 1:
