@@ -13,6 +13,19 @@ class Card:
         self.value = value
         self.suit = suit
 
+    def __str__(self):
+        if self.value == 1:
+            return f"Ace: {self.suit}"
+        elif self.value == 11:
+            return f"Jack: {self.suit}"
+        elif self.value == 12:
+            return f"Queen: {self.suit}"
+        elif self.value == 13:
+            return f"King: {self.suit}"
+        else:
+            return f"{self.value}: {self.suit}"
+
+
     def __gt__(self,other):
         if type(other) != Card:
             raise TypeError("Argument other must be of type Card")
