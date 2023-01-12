@@ -21,12 +21,3 @@ class DeckOfCards:
     def deal_one(self):
         a=randint(0,52)
         return self.deck.pop(a)
-
-
-# d=DeckOfCards()
-# print(d)
-# d.cards_shuffle()
-# print(d)
-# print(d.deal_one())
-# print(d)
-
