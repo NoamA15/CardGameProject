@@ -81,7 +81,8 @@ class TestCard(TestCase):
     def test__eq__valid_true(self):
         """This test checks a valid card comparison"""
         card = Card(5, "Heart")
-        self.assertTrue(card == self.card5)
+        card2 = Card(5, "Heart")
+        self.assertTrue(card == card2)
 
     def test__eq__valid_false(self):
         """This test checks a valid false card comparison"""
