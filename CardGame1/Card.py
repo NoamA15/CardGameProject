@@ -43,4 +43,4 @@ class Card:
     def __eq__(self, other):
         if type(other) != Card:
             raise TypeError("Argument other must be of type Card")
-        return self.value == other.value
+        return self.value == other.value and self.suit == other.suit

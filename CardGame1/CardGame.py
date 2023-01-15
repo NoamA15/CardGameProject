@@ -13,6 +13,8 @@ class CardGame:
             raise TypeError('Argument must be of type int')
         if type(num_of_cards_p2) != int:
             raise TypeError('Argument must be of type int')
+        if num_of_cards_p1 != num_of_cards_p2:
+            raise ValueError('Arguments num_of_cards must be equal')
         self.deck = DeckOfCards()
         self.p1 = Player(p1, num_of_cards_p1)
         self.p2 = Player(p2, num_of_cards_p2)

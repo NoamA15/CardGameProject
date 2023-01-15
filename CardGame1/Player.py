@@ -11,8 +11,9 @@ class Player:
             raise TypeError("The number of cards must be of type int")
         if number_of_cards > 26 or number_of_cards < 10:
             self.number_of_cards = 26
+        else:
+            self.number_of_cards = number_of_cards
         self.name = p_name
-        self.number_of_cards = number_of_cards
         self.hand = []
 
     def __repr__(self):
@@ -30,4 +31,6 @@ class Player:
         return hand.pop(randint(0, len(self.hand)-1))
 
     def add_card(self, card: Card):
+        if type(card) != Card:
+            raise TypeError("Argument card must be type Card")
         self.hand.append(card)
