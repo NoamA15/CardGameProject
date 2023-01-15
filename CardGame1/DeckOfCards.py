@@ -11,7 +11,8 @@ class DeckOfCards:
         for suit in self.list1:
             for value in range(1, 14):
                 card1 = Card(value, suit)
-                self.deck.append(card1)
+                if card1 not in self.deck:
+                    self.deck.append(card1)
 
     def __repr__(self):
         """This function returns the deck with the number and suit of each card"""
