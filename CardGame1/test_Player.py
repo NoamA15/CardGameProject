@@ -1,4 +1,4 @@
-from unittest import TestCase, mock
+from unittest import TestCase
 from Player import Player
 from Card import Card
 from DeckOfCards import DeckOfCards

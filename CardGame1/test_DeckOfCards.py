@@ -1,7 +1,5 @@
-from unittest import TestCase, mock
+from unittest import TestCase
 from DeckOfCards import DeckOfCards
-from Card import Card
-from unittest.mock import patch
 
 
 class TestDeckOfCards(TestCase):
@@ -16,10 +14,10 @@ class TestDeckOfCards(TestCase):
 
     def test_cards_shuffle_Valid(self):
         """This test checks that the function cards shuffle really shuffles the deck"""
-        list1 = self.deck1.deck[:14]
+        list1 = list(self.deck1.deck)
         self.deck1.cards_shuffle()
-        list2 = self.deck1.deck[:14]
-        self.assertFalse(list1 == list2)
+        list2 = self.deck1.deck
+        self.assertNotEqual(list1, list2)
         # print(list1)
         # print(list2)
 

@@ -1,15 +1,11 @@
-from unittest import TestCase, mock
-from Player import Player
-from Card import Card
-from DeckOfCards import DeckOfCards
+from unittest import TestCase
 from CardGame import CardGame
-from unittest.mock import patch
 
 
 class TestCardGame(TestCase):
 
     def setUp(self):
-        self.game=CardGame('Ezra', 26, 'Noam', 26)
+        self.game = CardGame('Ezra', 26, 'Noam', 26)
 
     def test_init_valid_deck1(self):
         """This test checks that the function dealt the exact amount of cards that the players wanted, """
